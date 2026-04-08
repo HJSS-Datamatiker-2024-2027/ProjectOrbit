@@ -63,4 +63,9 @@ table 50100 License
         // Add changes to field groups here
     }
 
+    trigger OnInsert()
+    begin
+        rec."Tenant Id" := CreateGuid();
+    end;
+
 }

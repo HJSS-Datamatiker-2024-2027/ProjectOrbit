@@ -6,6 +6,7 @@ page 50101 "License API"
     APIPublisher = 'gruppe6';
     APIVersion = 'v1.0';
     ApplicationArea = All;
+    UsageCategory = Administration; // temp
     Caption = 'licenseAPI';
     DelayedInsert = true;
     EntityName = 'license';
@@ -31,7 +32,7 @@ page 50101 "License API"
                 {
                     Caption = 'Customer Name';
                 }
-                field(extensionId; Rec."Extension Id")
+                field(extensionId; Rec."Extension Id") // lav tabel for sig selv
                 {
                     Caption = 'Extension Id';
                 }
