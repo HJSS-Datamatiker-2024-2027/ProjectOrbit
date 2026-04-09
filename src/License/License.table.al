@@ -52,7 +52,7 @@ table 50100 License
 
     keys
     {
-        key(PK; Id)
+        key(PK; "Tenant Id")
         {
             Clustered = true;
         }
