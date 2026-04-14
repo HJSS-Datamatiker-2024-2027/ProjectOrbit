@@ -37,7 +37,7 @@ table 50100 License
             Caption = 'Date Created';
         }
 
-        field(6; "Expiration Date"; Date)
+        field(6; "Expiration Date"; DateTime)
         {
             DataClassification = ToBeClassified;
             Caption = 'Expiration Date';
@@ -52,7 +52,7 @@ table 50100 License
 
     keys
     {
-        key(PK; "Tenant Id")
+        key(PK; "Id")
         {
             Clustered = true;
         }
