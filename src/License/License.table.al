@@ -48,6 +48,12 @@ table 50100 License
             DataClassification = ToBeClassified;
             Caption = 'Status';
         }
+
+        field(8; "Customer No."; Code[20])
+        {
+            Caption = 'Customer No.';
+            TableRelation = Customer."No.";
+        }
     }
 
     keys
