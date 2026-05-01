@@ -4,46 +4,39 @@ table 50100 License
 
     fields
     {
-        field(1; Id; Integer)
-        {
-            DataClassification = ToBeClassified;
-            Caption = 'Id';
-            AutoIncrement = true; // sql "serial" / "identity"
-        }
-
-        field(2; "Tenant Id"; Guid)
+        field(1; "Tenant Id"; Guid)
         {
             // Table Relation her!
             DataClassification = ToBeClassified;
             Caption = 'Tenant Id';
         }
 
-        field(3; "Customer Name"; Text[100])
+        field(2; "Customer Name"; Text[100])
         {
             // Skal Customer Name på?
             DataClassification = ToBeClassified;
             Caption = 'Customer Name';
         }
 
-        field(4; "Extension Id"; Integer)
+        field(3; "Extension Id"; Guid)
         {
             DataClassification = ToBeClassified;
             Caption = 'Extension Id';
         }
 
-        field(5; "Date Created"; DateTime)
+        field(4; "Date Created"; DateTime)
         {
             DataClassification = ToBeClassified;
             Caption = 'Date Created';
         }
 
-        field(6; "Expiration Date"; DateTime)
+        field(5; "Expiration Date"; DateTime)
         {
             DataClassification = ToBeClassified;
             Caption = 'Expiration Date';
         }
 
-        field(7; Status; Enum "License Status")
+        field(6; Status; Enum "License Status")
         {
             DataClassification = ToBeClassified;
             Caption = 'Status';
@@ -52,7 +45,7 @@ table 50100 License
 
     keys
     {
-        key(PK; "Id")
+        key(PK; "Tenant Id", "Extension Id")
         {
             Clustered = true;
         }
@@ -65,7 +58,7 @@ table 50100 License
 
     trigger OnInsert()
     begin
-        rec."Tenant Id" := CreateGuid();
+        //rec."Tenant Id" := CreateGuid();
     end;
 
 }

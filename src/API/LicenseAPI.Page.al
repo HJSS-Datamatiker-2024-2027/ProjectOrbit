@@ -20,10 +20,6 @@ page 50101 "License API"
         {
             repeater(General)
             {
-                field(id; Rec.Id)
-                {
-                    Caption = 'Id';
-                }
                 field(tenantId; Rec."Tenant Id")
                 {
                     Caption = 'Tenant Id';

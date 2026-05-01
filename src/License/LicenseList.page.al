@@ -12,10 +12,6 @@ page 50100 "License List"
             repeater(GroupName)
             {
 
-                field(Id; Rec.Id)
-                {
-                    ToolTip = 'Specifies the value of the Id field.', Comment = '%';
-                }
                 field("Tenant Id"; Rec."Tenant Id")
                 {
                     ToolTip = 'Specifies the value of the Tenant Id field.', Comment = '%';
@@ -43,20 +39,4 @@ page 50100 "License List"
             }
         }
     }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
-    }
-
 }

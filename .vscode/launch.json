@@ -5,19 +5,18 @@
             "name": "Your own server",
             "request": "launch",
             "type": "al",
-            "environmentType": "OnPrem",
-            "server": "http://bcserver",
-            "serverInstance": "BC",
-            "authentication": "UserPassword",
-            "startupObjectId": 22,
+            "environmentType": "Sandbox",
+            "environmentName": "sandbox",
+            "server": "https://businesscentral.dynamics.com/44833fc5-b393-4b9f-897a-1f876412ddb1/Production",
+            "startupObjectId": 50200,
             "startupObjectType": "Page",
             "breakOnError": "All",
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
-            "tenant": "default",
+            "tenant": "44833fc5-b393-4b9f-897a-1f876412ddb1",
             "usePublicURLFromServer": true,
-            "schemaUpdateMode": "ForceSync" // Skal normalt stå på synchronize!
+            "schemaUpdateMode": "ForceSync",
         }
     ]
 }
