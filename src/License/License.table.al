@@ -58,7 +58,8 @@ table 50100 License
 
     trigger OnInsert()
     begin
-        //rec."Tenant Id" := CreateGuid();
+        Rec."Customer Name" := 'API Insert Test';
+        Rec.Status := Rec.Status::Pending;
     end;
 
 }

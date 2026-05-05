@@ -21,4 +21,9 @@ enum 50100 "License Status"
     {
         Caption = 'Expired';
     }
+
+    value(4; Pending)
+    {
+        Caption = 'Pending';
+    }
 }
