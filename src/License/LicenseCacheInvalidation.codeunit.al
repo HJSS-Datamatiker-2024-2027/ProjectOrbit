@@ -12,7 +12,7 @@ codeunit 50100 "License Cache Invalidation"
         Result: Boolean;
     begin
         RequestMessage.Method := 'DELETE';
-        Url := StrSubstNo('https://projectdummysatellite-production.up.railway.app/api/licenses?tenantId=%1&extensionId=%2', xRec."Tenant Id", xRec."Extension Id");
+        Url := StrSubstNo('https://satellite-production.up.railway.app/api/Licenses?tenantId=%1&&extensionId=%2', xRec."Tenant Id", xRec."Extension Id");
         RequestMessage.SetRequestUri(Url);
 
         if not Client.Send(RequestMessage, ResponseMessage) then
